@@ -41,7 +41,7 @@ RUN chown root:zabbix /etc/zabbix/zabbix_proxy.conf
 
 # Monit
 #ADD ./monitrc /etc/monitrc
-RUN chmod 600 /etc/monitrc
+#RUN chmod 600 /etc/monitrc
 
 # https://github.com/dotcloud/docker/issues/1240#issuecomment-21807183
 RUN echo "NETWORKING=yes" > /etc/sysconfig/network
