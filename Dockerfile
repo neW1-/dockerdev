@@ -27,7 +27,7 @@ RUN yum -y -q install monit
 # Cleaining up.
 RUN yum clean all
 # MySQL
-#RUN service mysqld start && chkconfig myslqd
+RUN service mysqld start && chkconfig myslqd
 # Zabbix Conf Files
 #ADD ./zabbix/zabbix.ini                                 /etc/php.d/zabbix.ini
 #ADD ./zabbix/httpd_zabbix.conf                  /etc/httpd/conf.d/zabbix.conf
