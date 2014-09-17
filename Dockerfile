@@ -47,8 +47,8 @@ RUN chown root:zabbix /etc/zabbix/zabbix_proxy.conf
 RUN echo "NETWORKING=yes" > /etc/sysconfig/network
 
 # Add the script that will start the repo.
-ADD ./scripts/start.sh /start.sh
-RUN chmod 755 /start.sh
+#ADD ./scripts/start.sh /start.sh
+#RUN chmod 755 /start.sh
 
 # Expose the Ports used by
 # * Zabbix services
@@ -56,4 +56,4 @@ RUN chmod 755 /start.sh
 EXPOSE 10051 10050 2812
 
 VOLUME ["/var/lib/mysql", "/usr/lib/zabbix/alertscripts", "/usr/lib/zabbix/externalscripts", "/etc/zabbix/zabbix_agentd.d", "/etc/zabbix/zabbix_proxyd.d"]
-CMD ["/bin/bash", "/start.sh"]
+CMD ["/bin/bash"]
