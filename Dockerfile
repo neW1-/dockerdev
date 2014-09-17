@@ -32,8 +32,8 @@ RUN yum clean all
 #ADD ./zabbix/zabbix.ini                                 /etc/php.d/zabbix.ini
 #ADD ./zabbix/httpd_zabbix.conf                  /etc/httpd/conf.d/zabbix.conf
 #ADD ./zabbix/zabbix.conf.php                    /etc/zabbix/web/zabbix.conf.php
-ADD ./zabbix/zabbix_agentd.conf                 /etc/zabbix/zabbix_agentd.conf
-ADD ./zabbix/zabbix_java_gateway.conf   /etc/zabbix/zabbix_java_gateway.conf
+#ADD ./zabbix/zabbix_agentd.conf                 /etc/zabbix/zabbix_agentd.conf
+#ADD ./zabbix/zabbix_java_gateway.conf   /etc/zabbix/zabbix_java_gateway.conf
 #ADD ./zabbix/zabbix_server.conf                 /etc/zabbix/zabbix_server.conf
 
 RUN chmod 640 /etc/zabbix/zabbix_proxy.conf
